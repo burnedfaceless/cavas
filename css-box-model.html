@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Box Model</title>
+    <style>
+        #canvas {
+            display: block;
+            margin: 200px auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas height="700" width="700" id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas')
+        const ctx = canvas.getContext('2d')
+        ctx.font = '30px Arial'
+        ctx.strokeText('CSS Box Model', 250, 85)
+
+        ctx.fillStyle = '#8a1b1b'
+        ctx.fillRect(40, 120, 600, 500)
+
+
+
+        ctx.fillStyle = '#488214'
+        ctx.fillRect(80, 160, 520, 420)
+
+        ctx.fillStyle = '#0a1058'
+        ctx.fillRect(120, 200, 440, 340)
+
+        ctx.clearRect(160, 240, 360, 260)
+
+        ctx.fillStyle = '#000'
+        ctx.font = '18px serif'
+        ctx.fillText('Margin', 60, 145)
+        ctx.fillText('Border ', 100, 185)
+        ctx.fillStyle = '#fff'
+        ctx.fillText('Padding ', 140, 225)
+        ctx.fillStyle = '#000'
+        ctx.fillText('Element Content', 280, 380)
+    </script>
+</body>
+</html>
